@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -75,6 +76,17 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent partnersIntent = new Intent(MainActivity.this, PartnersActivity.class);
                     startActivity(partnersIntent);
+                }
+            });
+        }
+
+        LinearLayout profile = (LinearLayout) findViewById(R.id.update_profile);
+        if(profile != null){
+            profile.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent profileIntent = new Intent(MainActivity.this, UpdateProfileActivity.class);
+                    startActivity(profileIntent);
                 }
             });
         }
