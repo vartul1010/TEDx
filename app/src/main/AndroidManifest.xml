@@ -23,7 +23,12 @@
         <activity android:name=".PartnersActivity" />
         <activity android:name=".ConnectActivity" />
         <activity android:name=".MainActivity" />
+
         <activity android:name=".Speakers"/>
+        <activity android:name=".SpeakersActivity" />
+        <activity android:name=".UpdateProfileActivity" />
+        <activity android:name=".RegistrationFormActivity"></activity>
+
     </application>
 
 </manifest>

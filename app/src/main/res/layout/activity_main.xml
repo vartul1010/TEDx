@@ -68,6 +68,7 @@
         android:paddingTop="20dp">
 
         <LinearLayout
+            android:id="@+id/update_profile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -91,6 +92,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/my_ticket"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -144,7 +146,7 @@
                 android:id="@+id/about"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:elevation="5dp">
 
@@ -161,7 +163,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="About"
                     android:textColor="#E4E4E4"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 
@@ -169,8 +171,8 @@
                 android:id="@+id/speakers"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
                 android:layout_weight="1"
                 android:elevation="5dp">
 
@@ -187,7 +189,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="Speakers"
                     android:textColor="#E4E4E4"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 
@@ -195,15 +197,15 @@
                 android:id="@+id/gallery"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
                 android:layout_weight="1"
                 android:elevation="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="#D02839"></ImageView>
+                    android:src="#D02839"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -213,7 +215,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="Gallery"
                     android:textColor="#E4E4E4"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 
@@ -228,7 +230,7 @@
                 android:id="@+id/theme"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:elevation="5dp">
 
@@ -245,7 +247,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="Theme"
                     android:textColor="#E4E4E4"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 
@@ -253,8 +255,8 @@
                 android:id="@+id/connect"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:elevation="5dp">
 
@@ -271,7 +273,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="Connect"
                     android:textColor="#E4E4E4"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 
@@ -279,8 +281,8 @@
                 android:id="@+id/partners"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:elevation="5dp">
 
@@ -297,7 +299,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="Partners"
                     android:textColor="#E4E4E4"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 

@@ -35,10 +35,6 @@ public class Speakers extends AppCompatActivity {
 
        final Animation slideUpAnimation = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_up);
-        ScrollView text = (ScrollView)findViewById(R.id.text1);
-        final int height = text.getHeight();
-        LinearLayout layout = (LinearLayout) findViewById(R.id.title);
-        final int h2 = layout.getHeight();
 
         galleryGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -52,7 +48,7 @@ public class Speakers extends AppCompatActivity {
                 builder.setCancelable(true);
                 AlertDialog alert = builder.create();
                 alert.show();
-                alert.getWindow().setLayout(LayoutParams.WRAP_CONTENT,height+h2);
+                alert.getWindow().setLayout(LayoutParams.WRAP_CONTENT,1100);
                             }
         });
     }
