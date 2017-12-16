@@ -120,14 +120,14 @@ public class ConnectActivity extends AppCompatActivity {
         connect_with.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialogView = inflater.inflate(R.layout.connect_with_dialog, null);
-                TextView face, web, tweet, snap, link, insta;
-                face = (TextView) findViewById(R.id.facebook);
-                web = (TextView) findViewById(R.id.website);
-                tweet = (TextView) findViewById(R.id.twitter);
-                link = (TextView) findViewById(R.id.linkedin);
-                insta = (TextView) findViewById(R.id.instagram);
-                snap = (TextView) findViewById(R.id.snapchat);
+                dialogView = inflater.inflate(R.layout.connect_with_dialog,null);
+                TextView face,web,tweet,snap,link,insta;
+                face = (TextView)dialogView.findViewById(R.id.facebook);
+                web = (TextView)dialogView.findViewById(R.id.website);
+                tweet = (TextView)dialogView.findViewById(R.id.twitter);
+                link = (TextView)dialogView.findViewById(R.id.linkedin);
+                insta = (TextView)dialogView.findViewById(R.id.instagram);
+                snap = (TextView)dialogView.findViewById(R.id.snapchat) ;
 
                 face.setTypeface(tfB);
                 web.setTypeface(tfB);
