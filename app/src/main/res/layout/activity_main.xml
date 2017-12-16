@@ -40,22 +40,22 @@
         android:paddingTop="20dp">
 
         <TextView
+            android:id="@+id/welcome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="left"
             android:text="HELLO VARTUL!"
-            android:id="@+id/welcome"
             android:textColor="#E4E4E4"
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/sign_out"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="right"
             android:text="Sign out"
-            android:id="@+id/sign_out"
             android:textColor="#E4E4E4" />
 
     </LinearLayout>
@@ -85,11 +85,11 @@
                 android:src="@drawable/myprofile_red" />
 
             <TextView
+                android:id="@+id/profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:text="Profile"
-                android:id="@+id/profile"
                 android:textColor="#E4E4E4" />
         </LinearLayout>
 
@@ -111,11 +111,11 @@
                 android:src="@drawable/ticket_red" />
 
             <TextView
+                android:id="@+id/ticket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:text="My Ticket"
-                android:id="@+id/ticket"
                 android:textColor="#E4E4E4" />
         </LinearLayout>
 
@@ -151,21 +151,21 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/main_buttons"
                 android:elevation="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="#D02839" />
+                    android:layout_height="match_parent" />
 
                 <TextView
+                    android:id="@+id/ab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="About"
-                    android:id="@+id/ab"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
@@ -178,14 +178,15 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/main_buttons"
                 android:elevation="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="#D02839" />
+                    android:layout_height="match_parent" />
 
                 <TextView
+                    android:id="@+id/sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -193,7 +194,6 @@
                     android:layout_marginBottom="20dp"
                     android:text="Speakers"
                     android:textColor="#E4E4E4"
-                    android:id="@+id/sp"
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -205,21 +205,21 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/main_buttons"
                 android:elevation="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="#D02839"/>
+                    android:layout_height="match_parent" />
 
                 <TextView
+                    android:id="@+id/ga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="Gallery"
-                    android:id="@+id/ga"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
@@ -238,21 +238,21 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/main_buttons"
                 android:elevation="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="#D02839" />
+                    android:layout_height="match_parent" />
 
                 <TextView
+                    android:id="@+id/th"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="Theme"
-                    android:id="@+id/th"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
@@ -265,21 +265,21 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/main_buttons"
                 android:elevation="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="#D02839" />
+                    android:layout_height="match_parent" />
 
                 <TextView
+                    android:id="@+id/co"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="Connect"
-                    android:id="@+id/co"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
@@ -292,21 +292,21 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:background="@drawable/main_buttons"
                 android:elevation="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="#D02839" />
+                    android:layout_height="match_parent" />
 
                 <TextView
+                    android:id="@+id/pa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="Partners"
-                    android:id="@+id/pa"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
