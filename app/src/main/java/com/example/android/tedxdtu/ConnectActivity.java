@@ -129,12 +129,12 @@ public class ConnectActivity extends AppCompatActivity {
                 insta = (TextView)dialogView.findViewById(R.id.instagram);
                 snap = (TextView)dialogView.findViewById(R.id.snapchat) ;
 
-                face.setTypeface(tfB);
-                web.setTypeface(tfB);
-                tweet.setTypeface(tfB);
-                link.setTypeface(tfB);
-                insta.setTypeface(tfB);
-                snap.setTypeface(tfB);
+                face.setTypeface(tfM);
+                web.setTypeface(tfM);
+                tweet.setTypeface(tfM);
+                link.setTypeface(tfM);
+                insta.setTypeface(tfM);
+                snap.setTypeface(tfM);
 
                 builder.setView(dialogView);
                 AlertDialog alertDialog = builder.create();
