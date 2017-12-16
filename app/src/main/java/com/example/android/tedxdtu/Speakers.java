@@ -1,6 +1,7 @@
 package com.example.android.tedxdtu;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -16,6 +17,7 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 /**
  * Created by shreya on 14/12/17.
@@ -23,18 +25,21 @@ import android.widget.ScrollView;
 
 public class Speakers extends AppCompatActivity {
 
+    Typeface tfM, tfB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
 
+        tfM = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Light.ttf");
+        tfB = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Bold.ttf");
+
+
         final GridView galleryGrid = (GridView) findViewById(R.id.gallery_grid);
         galleryGrid.setAdapter(new ImageAdapter(this));
        final LinearLayout custom = (LinearLayout)findViewById(R.id.custom_bar);
 
-
-       final Animation slideUpAnimation = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.slide_up);
 
         galleryGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -42,8 +47,13 @@ public class Speakers extends AppCompatActivity {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Speakers.this);
                 LayoutInflater inflater = getLayoutInflater();
                 View dialogView = inflater.inflate(R.layout.speakers_about, null);
-                dialogView.clearAnimation();
-                dialogView.setAnimation(slideUpAnimation);
+
+                TextView name,detail;
+                name = (TextView)dialogView.findViewById(R.id.name);
+                name.setTypeface(tfB);
+                detail = (TextView)dialogView.findViewById(R.id.detail);
+                detail.setTypeface(tfM);
+
                 builder.setView(dialogView);
                 builder.setCancelable(true);
                 AlertDialog alert = builder.create();

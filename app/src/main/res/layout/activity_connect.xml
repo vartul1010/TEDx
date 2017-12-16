@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -70,6 +72,7 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
                 android:text="Call Us"
+                android:id="@+id/call_textView"
                 android:textColor="#000000" />
 
             <TextView
@@ -105,6 +108,7 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
                 android:text="Mail Us"
+                android:id="@+id/mail_textView"
                 android:textColor="#000000" />
 
             <TextView
@@ -140,6 +144,7 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
                 android:text="Connect With Us"
+              android:id="@+id/connect_textView"
                 android:textColor="#000000" />
 
             <TextView
@@ -175,6 +180,7 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
                 android:text="Location"
+                android:id="@+id/location_textView"
                 android:textColor="#000000" />
 
             <TextView
@@ -188,3 +194,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</ScrollView>

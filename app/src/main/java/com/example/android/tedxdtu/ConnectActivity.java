@@ -1,6 +1,7 @@
 package com.example.android.tedxdtu;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.provider.ContactsContract.Profile;
 import android.support.v7.app.AlertDialog;
@@ -26,19 +27,37 @@ public class ConnectActivity extends AppCompatActivity {
     AlertDialog.Builder builder;
     LayoutInflater inflater;
     View dialogView;
+    TextView call_, mail_, connect_, location_;
+
+    Typeface tfM,tfB;
 
     private LinearLayout phone,mail,connect_with,location;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        tfM = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Medium.ttf");
+        tfB = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Bold.ttf");
+
+
         setContentView(R.layout.activity_connect);
         phone = (LinearLayout)findViewById(R.id.call_us);
         mail = (LinearLayout)findViewById(R.id.mail_us);
         connect_with = (LinearLayout)findViewById(R.id.connect_with_us);
         location = (LinearLayout)findViewById(R.id.location);
 
+        call_ = (TextView)findViewById(R.id.call_textView);
+        mail_ = (TextView)findViewById(R.id.mail_textView);
+        connect_ = (TextView)findViewById(R.id.connect_textView);
+        location_ = (TextView)findViewById(R.id.location_textView);
+
+        call_.setTypeface(tfM);
+        mail_.setTypeface(tfM);
+        connect_.setTypeface(tfM);
+        location_.setTypeface(tfM);
+
         builder=new AlertDialog.Builder(ConnectActivity.this);
         inflater = getLayoutInflater();
+
 
         phone.setOnClickListener(new OnClickListener() {
             @Override
@@ -51,8 +70,10 @@ public class ConnectActivity extends AppCompatActivity {
                 builder.setView(dialogView);
                 TextView text1= (TextView) dialogView.findViewById(R.id.number1);
                 text1.setText(phone[0]);
+                text1.setTypeface(tfM);
                 TextView text2=(TextView)dialogView.findViewById(R.id.number2);
                 text2.setText(phone[1]);
+                text2.setTypeface(tfM);
                 text1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -99,6 +120,21 @@ public class ConnectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dialogView = inflater.inflate(R.layout.connect_with_dialog,null);
+                TextView face,web,tweet,snap,link,insta;
+                face = (TextView)findViewById(R.id.facebook);
+                web = (TextView)findViewById(R.id.website);
+                tweet = (TextView)findViewById(R.id.twitter);
+                link = (TextView)findViewById(R.id.linkedin);
+                insta = (TextView)findViewById(R.id.instagram);
+                snap = (TextView)findViewById(R.id.snapchat) ;
+
+                face.setTypeface(tfB);
+                web.setTypeface(tfB);
+                tweet.setTypeface(tfB);
+                link.setTypeface(tfB);
+                insta.setTypeface(tfB);
+                snap.setTypeface(tfB);
+
                 builder.setView(dialogView);
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();

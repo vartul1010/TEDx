@@ -46,6 +46,7 @@
             android:layout_weight="1"
             android:gravity="left"
             android:text="HELLO VARTUL!"
+            android:id="@+id/welcome"
             android:textColor="#E4E4E4"
             android:textSize="20sp" />
 
@@ -55,6 +56,7 @@
             android:layout_weight="1"
             android:gravity="right"
             android:text="Sign out"
+            android:id="@+id/sign_out"
             android:textColor="#E4E4E4" />
 
     </LinearLayout>
@@ -74,9 +76,9 @@
             android:layout_weight="1"
             android:background="@drawable/rounded_corner"
             android:gravity="center"
-            android:paddingBottom="5dp"
+            android:paddingBottom="10dp"
             android:paddingRight="20dp"
-            android:paddingTop="5dp">
+            android:paddingTop="10dp">
 
             <ImageView
                 android:layout_width="15dp"
@@ -88,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:text="Profile"
+                android:id="@+id/profile"
                 android:textColor="#E4E4E4" />
         </LinearLayout>
 
@@ -99,9 +102,9 @@
             android:layout_weight="1"
             android:background="@drawable/rounded_corner"
             android:gravity="center"
-            android:paddingBottom="5dp"
+            android:paddingBottom="10dp"
             android:paddingRight="20dp"
-            android:paddingTop="5dp">
+            android:paddingTop="10dp">
 
             <ImageView
                 android:layout_width="15dp"
@@ -113,6 +116,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:text="My Ticket"
+                android:id="@+id/ticket"
                 android:textColor="#E4E4E4" />
         </LinearLayout>
 
@@ -162,6 +166,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="About"
+                    android:id="@+id/ab"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
@@ -189,6 +194,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="Speakers"
                     android:textColor="#E4E4E4"
+                    android:id="@+id/sp"
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -214,6 +220,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="Gallery"
+                    android:id="@+id/ga"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
@@ -246,6 +253,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="Theme"
+                    android:id="@+id/th"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
@@ -272,6 +280,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="Connect"
+                    android:id="@+id/co"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 
@@ -298,6 +307,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:text="Partners"
+                    android:id="@+id/pa"
                     android:textColor="#E4E4E4"
                     android:textSize="15sp" />
 

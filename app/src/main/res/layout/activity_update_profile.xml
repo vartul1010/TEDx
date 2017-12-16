@@ -48,6 +48,7 @@
             android:layout_weight="0.125"
             android:gravity="center"
             android:text="Vartul Bhardwaj"
+            android:id="@+id/name_"
             android:textColor="#696969"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -58,6 +59,7 @@
             android:layout_weight="0.125"
             android:gravity="center"
             android:text="vartul.bhardwaj1998@gmail.com"
+            android:id="@+id/email"
             android:textColor="#696969"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -68,6 +70,7 @@
             android:layout_weight="0.25"
             android:gravity="center"
             android:text="UNREGISTERED"
+            android:id="@+id/register"
             android:textColor="#000000"
             android:textSize="15sp"
             android:textStyle="bold" />

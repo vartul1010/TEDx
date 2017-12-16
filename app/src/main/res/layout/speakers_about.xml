@@ -19,6 +19,7 @@
       android:layout_weight="1"
       android:layout_height="wrap_content"
       android:text="RICHA CHADHA"
+      android:id="@+id/name"
       android:textColor="#ffffff"
       android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
@@ -38,12 +39,13 @@
     android:padding="25dp">
 
          <TextView
-        android:lineSpacingExtra="7dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/about"
-        android:textColor="#ffffff"
-        android:textSize="15sp" />
+          android:lineSpacingExtra="7dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+           android:id="@+id/detail"
+          android:text="@string/about"
+          android:textColor="#ffffff"
+          android:textSize="15sp" />
 
   </ScrollView>
 
