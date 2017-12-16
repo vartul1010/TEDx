@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import de.cketti.mailto.EmailIntentBuilder;
 
 public class ConnectActivity extends AppCompatActivity {
@@ -29,56 +30,56 @@ public class ConnectActivity extends AppCompatActivity {
     View dialogView;
     TextView call_, mail_, connect_, location_;
 
-    Typeface tfM,tfB;
+    Typeface tfM, tfB;
 
-    private LinearLayout phone,mail,connect_with,location;
+    private LinearLayout phone, mail, connect_with, location;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        tfM = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Medium.ttf");
-        tfB = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Bold.ttf");
-
+        tfM = Typeface.createFromAsset(this.getAssets(), "fonts/HindSiliguri-Medium.ttf");
+        tfB = Typeface.createFromAsset(this.getAssets(), "fonts/HindSiliguri-Bold.ttf");
 
         setContentView(R.layout.activity_connect);
-        phone = (LinearLayout)findViewById(R.id.call_us);
-        mail = (LinearLayout)findViewById(R.id.mail_us);
-        connect_with = (LinearLayout)findViewById(R.id.connect_with_us);
-        location = (LinearLayout)findViewById(R.id.location);
+        phone = (LinearLayout) findViewById(R.id.call_us);
+        mail = (LinearLayout) findViewById(R.id.mail_us);
+        connect_with = (LinearLayout) findViewById(R.id.connect_with_us);
+        location = (LinearLayout) findViewById(R.id.location);
 
-        call_ = (TextView)findViewById(R.id.call_textView);
-        mail_ = (TextView)findViewById(R.id.mail_textView);
-        connect_ = (TextView)findViewById(R.id.connect_textView);
-        location_ = (TextView)findViewById(R.id.location_textView);
+        call_ = (TextView) findViewById(R.id.call_textView);
+        mail_ = (TextView) findViewById(R.id.mail_textView);
+        connect_ = (TextView) findViewById(R.id.connect_textView);
+        location_ = (TextView) findViewById(R.id.location_textView);
 
         call_.setTypeface(tfM);
         mail_.setTypeface(tfM);
         connect_.setTypeface(tfM);
         location_.setTypeface(tfM);
 
-        builder=new AlertDialog.Builder(ConnectActivity.this);
+        builder = new AlertDialog.Builder(ConnectActivity.this);
         inflater = getLayoutInflater();
 
 
         phone.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String[] phone=new String[2];
-                phone[0]="+918373920868";
-                phone[1]="+918586096079";
+                final String[] phone = new String[2];
+                phone[0] = "+918373920868";
+                phone[1] = "+918586096079";
 
                 dialogView = inflater.inflate(R.layout.phone_dialog, null);
                 builder.setView(dialogView);
-                TextView text1= (TextView) dialogView.findViewById(R.id.number1);
+                TextView text1 = (TextView) dialogView.findViewById(R.id.number1);
                 text1.setText(phone[0]);
                 text1.setTypeface(tfM);
-                TextView text2=(TextView)dialogView.findViewById(R.id.number2);
+                TextView text2 = (TextView) dialogView.findViewById(R.id.number2);
                 text2.setText(phone[1]);
                 text2.setTypeface(tfM);
                 text1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_DIAL);
-                        intent.setData(Uri.parse("tel:"+phone[0]));
+                        intent.setData(Uri.parse("tel:" + phone[0]));
                         startActivity(intent);
 
                     }
@@ -87,11 +88,11 @@ public class ConnectActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_DIAL);
-                        intent.setData(Uri.parse("tel:"+phone[1]));
+                        intent.setData(Uri.parse("tel:" + phone[1]));
                         startActivity(intent);
                     }
                 });
-                AlertDialog alert= builder.create();
+                AlertDialog alert = builder.create();
                 alert.show();
 
             }
@@ -119,14 +120,14 @@ public class ConnectActivity extends AppCompatActivity {
         connect_with.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialogView = inflater.inflate(R.layout.connect_with_dialog,null);
-                TextView face,web,tweet,snap,link,insta;
-                face = (TextView)findViewById(R.id.facebook);
-                web = (TextView)findViewById(R.id.website);
-                tweet = (TextView)findViewById(R.id.twitter);
-                link = (TextView)findViewById(R.id.linkedin);
-                insta = (TextView)findViewById(R.id.instagram);
-                snap = (TextView)findViewById(R.id.snapchat) ;
+                dialogView = inflater.inflate(R.layout.connect_with_dialog, null);
+                TextView face, web, tweet, snap, link, insta;
+                face = (TextView) findViewById(R.id.facebook);
+                web = (TextView) findViewById(R.id.website);
+                tweet = (TextView) findViewById(R.id.twitter);
+                link = (TextView) findViewById(R.id.linkedin);
+                insta = (TextView) findViewById(R.id.instagram);
+                snap = (TextView) findViewById(R.id.snapchat);
 
                 face.setTypeface(tfB);
                 web.setTypeface(tfB);
