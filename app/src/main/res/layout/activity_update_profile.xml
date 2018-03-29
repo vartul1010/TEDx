@@ -100,13 +100,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Registration Form"
+            android:text="Questionnaire"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-
     </LinearLayout>
-
 
 </LinearLayout>

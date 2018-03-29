@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SpashScreenActivity">
+        <activity android:name=".RegistrationFormActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,10 +23,10 @@
         <activity android:name=".PartnersActivity" />
         <activity android:name=".ConnectActivity" />
         <activity android:name=".MainActivity" />
-
+        <activity android:name=".SigninActivity"/>
         <activity android:name=".Speakers"/>
         <activity android:name=".UpdateProfileActivity" />
-        <activity android:name=".RegistrationFormActivity"></activity>
+        <activity android:name=".SpashScreenActivity"></activity>
 
     </application>
 
