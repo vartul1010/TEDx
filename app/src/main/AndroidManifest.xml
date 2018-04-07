@@ -10,11 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".RegistrationFormActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SingleViewActivity" />
         <activity android:name=".AboutActivity" />
@@ -23,7 +19,13 @@
         <activity android:name=".PartnersActivity" />
         <activity android:name=".ConnectActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SigninActivity"/>
+        <activity android:name=".SigninActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".Speakers"/>
         <activity android:name=".UpdateProfileActivity" />
         <activity android:name=".SpashScreenActivity"></activity>
