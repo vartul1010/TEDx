@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MainActivity extends AppCompatActivity {
     Typeface tfM ,tfB ;
 
@@ -23,13 +25,7 @@ public class MainActivity extends AppCompatActivity {
         tfB = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Bold.ttf");
 
         welcome = (TextView)findViewById(R.id.welcome);
-        welcome.setTypeface(tfB);
-        sign_out = (TextView)findViewById(R.id.sign_out);
-        sign_out.setTypeface(tfB);
-        profile = (TextView)findViewById(R.id.profile);
-        profile.setTypeface(tfM);
-        ticket = (TextView)findViewById(R.id.ticket);
-        ticket.setTypeface(tfM);
+        welcome.setTypeface(tfM);
         ab = (TextView)findViewById(R.id.ab);
         ab.setTypeface(tfM);
         sp = (TextView)findViewById(R.id.sp);
@@ -109,15 +105,14 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        LinearLayout profile = (LinearLayout) findViewById(R.id.update_profile);
-        if(profile != null){
-            profile.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent profileIntent = new Intent(MainActivity.this, UpdateProfileActivity.class);
-                    startActivity(profileIntent);
-                }
-            });
-        }
+        CircleImageView profile = (CircleImageView) findViewById(R.id.profile_icon);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, UpdateProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

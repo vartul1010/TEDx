@@ -1,11 +1,16 @@
 package com.example.android.tedxdtu;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.constraint.solver.SolverVariable.Type;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class UpdateProfileActivity extends AppCompatActivity {
     Typeface tfM, tfB;
@@ -16,19 +21,13 @@ public class UpdateProfileActivity extends AppCompatActivity {
         tfM = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Medium.ttf");
         tfB = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Bold.ttf");
 
-
-        TextView name,email,register_status;
-        name = (TextView)findViewById(R.id.name_);
-        name.setTypeface(tfB);
-
-        email = (TextView)findViewById(R.id.email);
-        email.setTypeface(tfM);
-
-        register_status = (TextView)findViewById(R.id.register);
-        register_status.setTypeface(tfB);
-
-        TextView button = (TextView) findViewById(R.id.registration_form);
-        button.setTypeface(tfB);
-
+        LinearLayout questionnaire = (LinearLayout) findViewById(R.id.questionnaire);
+        questionnaire.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UpdateProfileActivity.this, RegistrationFormActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -27,7 +27,7 @@ public class SpashScreenActivity extends Activity {
 
         @Override
         public void onAnimationEnd(Animation animation) {
-            Intent intent = new Intent(SpashScreenActivity.this, MainActivity.class);
+            Intent intent = new Intent(SpashScreenActivity.this, SigninActivity.class);
             startActivity(intent);
         }
 

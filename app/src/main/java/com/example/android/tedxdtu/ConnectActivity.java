@@ -3,10 +3,9 @@ package com.example.android.tedxdtu;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
-import android.provider.ContactsContract.Profile;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -59,7 +58,6 @@ public class ConnectActivity extends AppCompatActivity {
         builder = new AlertDialog.Builder(ConnectActivity.this);
         inflater = getLayoutInflater();
 
-
         phone.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,6 +82,7 @@ public class ConnectActivity extends AppCompatActivity {
 
                     }
                 });
+
                 text2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -101,7 +100,6 @@ public class ConnectActivity extends AppCompatActivity {
         mail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 EmailIntentBuilder.from(ConnectActivity.this)
                         .to("contact@tedxdtu.in")
                         .subject("Support TEDxDTU")
@@ -120,14 +118,14 @@ public class ConnectActivity extends AppCompatActivity {
         connect_with.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialogView = inflater.inflate(R.layout.connect_with_dialog,null);
-                TextView face,web,tweet,snap,link,insta;
-                face = (TextView)dialogView.findViewById(R.id.facebook);
-                web = (TextView)dialogView.findViewById(R.id.website);
-                tweet = (TextView)dialogView.findViewById(R.id.twitter);
-                link = (TextView)dialogView.findViewById(R.id.linkedin);
-                insta = (TextView)dialogView.findViewById(R.id.instagram);
-                snap = (TextView)dialogView.findViewById(R.id.snapchat) ;
+                dialogView = inflater.inflate(R.layout.connect_with_dialog, null);
+                TextView face, web, tweet, snap, link, insta;
+                face = (TextView) dialogView.findViewById(R.id.facebook);
+                web = (TextView) dialogView.findViewById(R.id.website);
+                tweet = (TextView) dialogView.findViewById(R.id.twitter);
+                link = (TextView) dialogView.findViewById(R.id.linkedin);
+                insta = (TextView) dialogView.findViewById(R.id.instagram);
+                snap = (TextView) dialogView.findViewById(R.id.snapchat);
 
                 face.setTypeface(tfM);
                 web.setTypeface(tfM);

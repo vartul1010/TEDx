@@ -31,12 +31,28 @@ public class AboutActivity extends AppCompatActivity {
         tfB = Typeface.createFromAsset(this.getAssets(),"fonts/HindSiliguri-Bold.ttf");
 
         setContentView(R.layout.activity_about);
-        TextView about,details;
-        about = (TextView) findViewById(R.id.about);
-        details = (TextView) findViewById(R.id.details);
+        TextView about_ted, about_tedx, about_dtu, about_tedxdtu,
+                details_ted, details_tedx, details_dtu, details_tedxdtu;
 
-        about.setTypeface(tfM);
-        details.setTypeface(tfM);
+        about_ted = (TextView) findViewById(R.id.about_ted);
+        about_tedx = (TextView) findViewById(R.id.about_tedx);
+        about_dtu = (TextView) findViewById(R.id.about_dtu);
+        about_tedxdtu = (TextView) findViewById(R.id.about_tedxdtu);
+
+        details_ted = (TextView) findViewById(R.id.details_ted);
+        details_tedx = (TextView) findViewById(R.id.details_tedx);
+        details_dtu = (TextView) findViewById(R.id.details_dtu);
+        details_tedxdtu = (TextView) findViewById(R.id.details_tedxdtu);
+
+        about_ted.setTypeface(tfM);
+        about_tedx.setTypeface(tfM);
+        about_dtu.setTypeface(tfM);
+        about_tedxdtu.setTypeface(tfM);
+
+        details_ted.setTypeface(tfM);
+        details_tedx.setTypeface(tfM);
+        details_dtu.setTypeface(tfM);
+        details_tedxdtu.setTypeface(tfM);
 
         LinearLayout mapImage = (LinearLayout) findViewById(R.id.map_image);
         if (mapImage != null) {
