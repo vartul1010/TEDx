@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="left"
-            android:text="HELLO VARTUL!"
+            android:text=""
             android:textColor="#E4E4E4"
             android:textSize="20sp" />
 

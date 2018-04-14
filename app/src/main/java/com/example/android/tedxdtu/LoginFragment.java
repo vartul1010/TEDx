@@ -6,11 +6,17 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginFragment extends Fragment {
 
@@ -24,9 +30,12 @@ public class LoginFragment extends Fragment {
     EditText email, password;
     TextView errorLogin;
     Boolean correct;
+    private TEDxDTU_Service service;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        service = API_Utils.getService();
 
         errorLogin = (TextView) getView().findViewById(R.id.error_login);
         errorLogin.setVisibility(View.GONE);
@@ -34,19 +43,8 @@ public class LoginFragment extends Fragment {
         email = (EditText) getView().findViewById(R.id.email_login);
         password = (EditText) getView().findViewById(R.id.password_login);
 
-        TextView login = (TextView) getView().findViewById(R.id.login_button);
+        final TextView login = (TextView) getView().findViewById(R.id.login_button);
         login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                emailString = email.getText().toString();
-                passwordString = password.getText().toString();
-                Intent intent = new Intent(getContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        TextView loginGoogle = (TextView) getView().findViewById(R.id.login_using_google_button);
-        loginGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 correct = true;
@@ -54,14 +52,50 @@ public class LoginFragment extends Fragment {
                 emailString = email.getText().toString();
                 passwordString = password.getText().toString();
 
-                //api checkpoint if failed correct=false and show errorTextView
-
-                if(correct) {
-                    Intent intent = new Intent(getContext(), MainActivity.class);
-                    startActivity(intent);
-                } else {
+                if(emailString.equals("") || passwordString.equals("")){
+                    correct = false;
                     errorLogin.setVisibility(View.VISIBLE);
                 }
+
+                if(correct){
+                    service.normalLogin(emailString, passwordString).enqueue(new Callback<NormalLogin>() {
+                        @Override
+                        public void onResponse(Call<NormalLogin> call, Response<NormalLogin> response) {
+                            if(response.isSuccessful()){
+                                if(response.body().getStatus().getMessage().equals("success")){
+                                    Intent intent = new Intent(getContext(), MainActivity.class);
+                                    startActivity(intent);
+                                } else if (response.body().getStatus().getMessage().equals("failure")){
+                                    correct = false;
+                                    errorLogin.setText(View.VISIBLE);
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<NormalLogin> call, Throwable t) {
+                            Toast.makeText(getContext(),
+                                    "Please check your Internet Connection",
+                                    Toast.LENGTH_LONG);
+
+                            Log.d("NormalLogin_Error", t.toString());
+                        }
+                    });
+                }
+
+
+
+
+            }
+        });
+
+        TextView loginGoogle = (TextView) getView().findViewById(R.id.login_using_google_button);
+        loginGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO
+                //api checkpoint if failed correct=false and show errorTextView
+
             }
         });
     }

@@ -37,15 +37,16 @@
     </LinearLayout>
 
     <GridView
-        android:background="#F4F4F4"
-        android:layout_margin="20dp"
         android:id="@+id/partners_grid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="25dp"
         android:layout_weight="4"
+        android:background="#F4F4F4"
         android:horizontalSpacing="10dp"
         android:numColumns="2"
+        android:gravity="center"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp"/>
+        android:verticalSpacing="50dp" />
 
 </LinearLayout>

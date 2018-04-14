@@ -13,7 +13,7 @@
         <EditText
             android:id="@+id/username_register"
             android:maxLines="1"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:nextFocusDown="@id/first_name_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/rounded_corner_white"
             android:hint="First Name"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:padding="15dp"
             android:textColor="#000000"
             android:textColorHint="#708090" />
@@ -47,7 +47,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/rounded_corner_white"
             android:hint="Last Name"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:padding="15dp"
             android:textColor="#000000"
             android:textColorHint="#708090" />
@@ -89,7 +89,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/rounded_corner_white"
             android:hint="Password"
-            android:inputType="textPassword"
+            android:inputType="textPassword|textNoSuggestions"
             android:padding="15dp"
             android:textColor="#000000"
             android:textColorHint="#708090" />
@@ -101,7 +101,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/rounded_corner_white"
             android:hint="Re-enter Password"
-            android:inputType="textPassword"
+            android:inputType="textPassword|textNoSuggestions"
             android:padding="15dp"
             android:textColor="#000000"
             android:textColorHint="#708090" />
@@ -111,6 +111,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:text="Error! Please provide valid information"
+            android:layout_marginBottom="10dp"
+            android:textColor="#e02839" />
+
+        <TextView
+            android:id="@+id/error_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Error! Passwords do not match"
             android:layout_marginBottom="10dp"
             android:textColor="#e02839" />
 

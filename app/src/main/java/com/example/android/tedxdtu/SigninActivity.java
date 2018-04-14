@@ -31,7 +31,7 @@ public class SigninActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
+        tabLayout.setupWithViewPager(viewPager);
     }
-
 
 }

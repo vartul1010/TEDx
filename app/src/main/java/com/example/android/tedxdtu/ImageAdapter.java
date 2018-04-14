@@ -47,10 +47,6 @@ public class ImageAdapter extends BaseAdapter {
     }
 
     public Integer[] mThumbIds = {
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
+            // gallery icons
     };
 }

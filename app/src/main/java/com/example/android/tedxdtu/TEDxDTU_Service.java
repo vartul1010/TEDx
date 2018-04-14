@@ -23,4 +23,15 @@ public interface TEDxDTU_Service {
     @GET("accounts/status")
     Call<StatusResponse> getInfo();
 
+    @Headers({"content-type: application/x-www-form-urlencoded",
+            "cache-control: no-cache",
+            "postman-token: c88fbbcd-9199-22d5-6851-89753b57f676"})
+    @POST("accounts/get_token/")
+    Call<NormalLogin> normalLogin(@Body String username, String password);
+    
+    @Headers({"content-type: application/x-www-form-urlencoded",
+            "cache-control: no-cache",
+            "postman-token: d5ef3717-b7bb-8e16-090f-5ca2db9c08ea"})
+    @POST("accounts/signup/")
+    Call<NormalRegister> normalRegister(@Body String username, String email, String password1, String password2);
 }

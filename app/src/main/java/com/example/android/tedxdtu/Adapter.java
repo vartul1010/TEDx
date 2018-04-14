@@ -47,10 +47,9 @@ public class Adapter extends BaseAdapter {
     }
 
     public Integer[] mThumbIds = {
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
-            R.drawable.tedxdtu, R.drawable.tedxdtu,
+            R.drawable.dub_logo, R.drawable.logo_300_100,
+            R.drawable.oh_campus_logo, R.drawable.download,
+            R.drawable.full_resolution, R.drawable.partners_img,
+            R.drawable.themagzone, R.drawable.allevents
     };
 }

@@ -52,7 +52,6 @@ public class UpdateProfileActivity extends AppCompatActivity {
         ques_img = (ImageView) findViewById(R.id.success_questionnaire);
         app_img = (ImageView) findViewById(R.id.success_application);
         pay_img = (ImageView) findViewById(R.id.success_payment);
-        ticket_img = (ImageView) findViewById(R.id.success_ticket);
 
         ques_img.setVisibility(View.GONE);
         app_img.setVisibility(View.GONE);
