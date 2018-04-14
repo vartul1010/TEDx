@@ -9,10 +9,10 @@
     tools:context="com.example.android.tedxdtu.SigninActivity">
 
     <ImageView
-        android:scaleX=".5"
-        android:scaleY=".5"
+        android:scaleX=".35"
+        android:scaleY=".35"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="100dp"
         android:scaleType="centerInside"
         android:src="@drawable/tedxdtu_white"/>
 

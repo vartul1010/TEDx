@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.tedxdtu">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,25 +12,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingleViewActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".GalleryActivity" />
-        <activity android:name=".ThemeActivity" />
-        <activity android:name=".PartnersActivity" />
-        <activity android:name=".ConnectActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".UpdateProfileActivity">
+        <activity android:name=".SingleViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AboutActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GalleryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ThemeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PartnersActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ConnectActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UpdateProfileActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".Speakers"/>
-        <activity android:name=".SigninActivity" />
-        <activity android:name=".SpashScreenActivity">
+        <activity android:name=".Speakers"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SigninActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SpashScreenActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationFormActivity" >
+        <activity android:name=".RegistrationFormActivity"
+            android:screenOrientation="portrait" >
         </activity>
 
     </application>

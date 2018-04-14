@@ -13,6 +13,7 @@
         <EditText
             android:id="@+id/username_register"
             android:maxLines="1"
+            android:inputType="text"
             android:nextFocusDown="@id/first_name_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
