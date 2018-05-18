@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Questionnaire {
+
     @SerializedName("status")
     @Expose
     private Boolean status;
@@ -30,4 +31,5 @@ public class Questionnaire {
     public void setAnswers(Answers answers) {
         this.answers = answers;
     }
+
 }

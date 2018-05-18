@@ -16,7 +16,7 @@ public class SingleViewActivity extends Activity {
 
         // Selected image id
         int position = i.getExtras().getInt("id");
-        ImageAdapter imageAdapter = new ImageAdapter(this);
+        GalleryAdapter imageAdapter = new GalleryAdapter(this);
 
         ImageView imageView = (ImageView) findViewById(R.id.SingleView);
         imageView.setImageResource(imageAdapter.mThumbIds[position]);

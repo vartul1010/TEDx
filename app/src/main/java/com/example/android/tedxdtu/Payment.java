@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Payment {
+
     @SerializedName("status")
     @Expose
     private Boolean status;

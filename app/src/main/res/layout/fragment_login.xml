@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:background="@drawable/rounded_corner_white"
-        android:hint="E-mail"
+        android:hint="E-Mail"
         android:maxLines="1"
         android:nextFocusDown="@id/password_login"
         android:inputType="textEmailAddress"

@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class StatusResponse {
+
     @SerializedName("data")
     @Expose
     private Data data;

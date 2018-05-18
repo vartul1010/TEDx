@@ -18,8 +18,8 @@ public class GalleryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
 
-        final GridView galleryGrid = (GridView) findViewById(R.id.gallery_grid);
-        galleryGrid.setAdapter(new ImageAdapter(this));
+        final GridView galleryGrid = findViewById(R.id.gallery_grid);
+        galleryGrid.setAdapter(new GalleryAdapter(this));
 
         galleryGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {

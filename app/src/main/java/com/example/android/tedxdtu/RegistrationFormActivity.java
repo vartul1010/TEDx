@@ -67,7 +67,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
                         answerOne = response.body().getData().getStatus().getQuestionnaire().getAnswers().getWhyWantToAttend();
                         answerTwo = response.body().getData().getStatus().getQuestionnaire().getAnswers().getHowComeToKnow();
                         answerThree = response.body().getData().getStatus().getQuestionnaire().getAnswers().getWhyIdeaWorth();
-                        // answerFour =
+                        answerFour = response.body().getData().getStatus().getQuestionnaire().getAnswers().getMobile();
 
                         success.setVisibility(View.VISIBLE);
 

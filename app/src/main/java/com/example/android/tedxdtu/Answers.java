@@ -9,6 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Answers {
 
+    @SerializedName("mobile")
+    @Expose
+    private String mobile;
     @SerializedName("why_want_to_attend")
     @Expose
     private String whyWantToAttend;
@@ -18,6 +21,14 @@ public class Answers {
     @SerializedName("how_come_to_know")
     @Expose
     private String howComeToKnow;
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
 
     public String getWhyWantToAttend() {
         return whyWantToAttend;

@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Status2 {
+
     @SerializedName("selction")
     @Expose
     private Selction selction;
@@ -41,4 +42,5 @@ public class Status2 {
     public void setPayment(Payment payment) {
         this.payment = payment;
     }
+
 }

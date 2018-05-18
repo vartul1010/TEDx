@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Selction {
+
     @SerializedName("status")
     @Expose
     private Boolean status;
@@ -19,4 +20,5 @@ public class Selction {
     public void setStatus(Boolean status) {
         this.status = status;
     }
+
 }
